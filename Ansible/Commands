@@ -2,10 +2,13 @@
 ansible –-version
 
 [Inventory]
+● Custom Inventory
 ansible-inventory -i /FOLDER_NAME/FILE_NAME --list
 
 [Ad-Hoc]
-
+● Dynamic Inventory
+ansible -i /FOLDER_NAME/FILE_NAME.yaml
 
 [Playbooks]
+● Custom Inventory
 ansible-playbook -i FOLDER_NAME/FILE_NAME --become-user=USER_NAME FILE_NAME.yaml
