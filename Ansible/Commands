@@ -7,7 +7,7 @@ ansible-inventory -i /FOLDER_NAME/FILE_NAME --list
 
 [Ad-Hoc]
 ● Dynamic Inventory
-ansible -i /FOLDER_NAME/FILE_NAME.yaml
+ansible -i /FOLDER_NAME/FILE_NAME.yaml ec2 -m ping --private-key=/home/USER_NAME/FILE_NAME.pem
 
 [Playbooks]
 ● Custom Inventory
