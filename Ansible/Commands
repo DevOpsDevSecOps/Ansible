@@ -1,2 +1,8 @@
+[Version]
+ansible –-version
+
+[Inventory]
+ansible-inventory -i /FOLDER_NAME/FILE_NAME --list
+
 [Playbooks]
 ansible-playbook -i FOLDER_NAME/FILE_NAME --become-user=USER_NAME FILE_NAME.yaml
