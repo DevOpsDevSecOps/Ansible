@@ -8,6 +8,8 @@ ansible-inventory -i /FOLDER_NAME/FILE_NAME --list
 [Ad-Hoc]
 ● Dynamic Inventory
 ansible -i /FOLDER_NAME/FILE_NAME.yaml ec2 -m ping --private-key=/home/USER_NAME/FILE_NAME.pem
+ansible -i /FOLDER_NAME/FILE_NAME.yaml ec2 -m apt -a 'name=git state=present' --private-key=/home/USER_NAME/FILE_NAME.pem --become
+ansible -i /FOLDER_NAME/FILE_NAME.yaml ec2 -m apt -a 'name=git state=present' --private-key=~/.ssh/FOLDER_NAME/PRIVATE_KEY_FILE_NAME --become
 
 [Playbooks]
 ● Custom Inventory
