@@ -6,6 +6,18 @@ ansible –-version
 ansible-inventory -i /FOLDER_NAME/FILE_NAME --list
 
 [Ad-Hoc]
+● Static Inventory
+ansible all -m setup
+ansible all -m user -a "name=foo password=<crypted password here>"                             # creation and manipulation of existing user accounts
+ansible all -m user -a "name=foo state=absent"                                                 # removal of user accounts that may exist 
+ansible GROUPNAME_HOSTS -m service -a "name=httpd state=started"                               # service is started on GROUPNAME_HOSTS
+ansible GROUPNAME_HOSTS -m service -a "name=httpd state=restarted"                             # restart a service on GROUPNAME_HOSTS 
+ansible GROUPNAME_HOSTS -m service -a "name=httpd state=stopped"                               # service is stopped on GROUPNAME_HOSTS
+ansible GROUPNAME_HOSTS -m yum -a "name=acme state=present"                                    # package is installed, but don’t update it
+ansible GROUPNAME_HOSTS -m yum -a "name=acme-1.5 state=present"                                # package is installed to a specific version
+ansible GROUPNAME_HOSTS -m yum -a "name=acme state=latest"                                     # package is at the latest version
+ansible GROUPNAME_HOSTS -m yum -a "name=acme state=absent"                                     # package is uninstalled  
+ansible GROUPNAME_HOSTS -m git -a "repo=https://foo.example.org/repo.git dest=/srv/myapp version=HEAD"
 ● Dynamic Inventory
 ansible -i /FOLDER_NAME/FILE_NAME.yaml ec2 -m ping --private-key=/home/USER_NAME/FILE_NAME.pem
 ansible -i /FOLDER_NAME/FILE_NAME.yaml ec2 -m apt -a 'name=git state=present' --private-key=/home/USER_NAME/FILE_NAME.pem --become
