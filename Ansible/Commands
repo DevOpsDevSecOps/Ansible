@@ -10,6 +10,8 @@ ansible-inventory -i /FOLDER_NAME/FILE_NAME --list
 ansible all -m setup
 ansible all -m user -a "name=foo password=<crypted password here>"                             # creation and manipulation of existing user accounts
 ansible all -m user -a "name=foo state=absent"                                                 # removal of user accounts that may exist 
+ansible GROUPNAME_HOSTS -m file -a "dest=/FOLDER_NAME/FOLDER_NAME/FILE_NAME mode=600"          # changing ownership and permissions on files
+ansible GROUPNAME_HOSTS -m copy -a "src=/FOLDER_NAME/FILE_NAME dest=/FOLDER_NAME/FILE_NAME"
 ansible GROUPNAME_HOSTS -m service -a "name=httpd state=started"                               # service is started on GROUPNAME_HOSTS
 ansible GROUPNAME_HOSTS -m service -a "name=httpd state=restarted"                             # restart a service on GROUPNAME_HOSTS 
 ansible GROUPNAME_HOSTS -m service -a "name=httpd state=stopped"                               # service is stopped on GROUPNAME_HOSTS
@@ -19,6 +21,7 @@ ansible GROUPNAME_HOSTS -m yum -a "name=acme state=latest"                      
 ansible GROUPNAME_HOSTS -m yum -a "name=acme state=absent"                                     # package is uninstalled  
 ansible GROUPNAME_HOSTS -m git -a "repo=https://foo.example.org/repo.git dest=/srv/myapp version=HEAD"
 ● Dynamic Inventory
+ansible -i FILE_NAME us-east-1d -u USER_NAME -m ping
 ansible -i /FOLDER_NAME/FILE_NAME.yaml ec2 -m ping --private-key=/home/USER_NAME/FILE_NAME.pem
 ansible -i /FOLDER_NAME/FILE_NAME.yaml ec2 -m apt -a 'name=git state=present' --private-key=/home/USER_NAME/FILE_NAME.pem --become
 ansible -i /FOLDER_NAME/FILE_NAME.yaml ec2 -m apt -a 'name=git state=present' --private-key=~/.ssh/FOLDER_NAME/PRIVATE_KEY_FILE_NAME --become
