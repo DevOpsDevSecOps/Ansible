@@ -47,3 +47,57 @@ It manage CORS for S3 buckets in AWS.
 
 [command]
 It execute commands on targets.
+It given command will be executed on all selected nodes.
+
+[copy]
+It copies a file from the local or remote machine to a location on the remote machine.
+
+[cron]
+It manage crontab and environment variables entries.
+It allows to create environment variables and named crontab entries, update, or delete them.
+
+[cronvar]
+It manage crontab variables.
+It allows to create, update, or delete cron variable definitions.
+
+[dnf]
+It installs, upgrade, removes, and lists packages and groups with the dnf package manager.
+
+[easy_install]
+It installs Python libraries, optionally in a virtualenv.
+
+[fetch]
+It works like copy, but in reverse.
+It copy files from remote locations to the local box.
+It is used for fetching files from remote machines and storing them locally in a file, organized by hostname.
+Files that already exist at dest will be overwritten if they are different than the src.
+
+[file]
+It manage the files, symlinks, directories.
+It also remove files, symlinks, directories.
+
+[filesystem]
+It creates a filesystem for Linux.
+
+[find]
+It list the no of files based on specific criteria.
+
+[git]
+It manage git checkouts of repositories to deploy files or software.
+
+[group]
+It manage presence of groups on a host Linux.
+
+[]
+
+[yum]
+It installs, upgrade, downgrades, removes, and lists packages and groups with the yum package manager.
+
+[yum_repository]
+It add or remove YUM repositories in RPM-based Linux distributions.
+
+[zypper]
+It manage packages on SUSE and openSUSE using the zypper and rpm tools.
+
+[zypper_repository]
+It add or remove Zypper repositories on SUSE and openSUSE.
