@@ -88,6 +88,22 @@ It manage git checkouts of repositories to deploy files or software.
 [group]
 It manage presence of groups on a host Linux.
 
+[import_playbook]
+Includes a file with a list of plays to be executed.
+Files with a list of plays can only be included at the top level.
+
+[import_role]
+
+[import_tasks]
+Imports a list of tasks to be added to the current playbook for subsequent execution.
+
+[include]
+Includes a file with a list of plays or tasks to be executed in the current playbook.
+Files with a list of plays can only be included at the top level. Lists of tasks can only be included where tasks normally run (in play).
+
+[include_role]
+
+
 [service]
 It controls services on remote hosts.
 
