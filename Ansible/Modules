@@ -1,0 +1,31 @@
+[apache2_module]
+It enables or disables a specified module of the Apache2 webserver.
+
+[apk]
+It manages apk packages for Alpine Linux.
+
+[apt]
+It manages apt packages (such as for Debian/Ubuntu).
+
+[apt_key]
+It add or remove an apt key, optionally downloading it.
+
+[apt_repo]
+It manages APT repositories using apt-repo tool.
+
+[apt_repository]
+It add or remove an APT repositories in Ubuntu and Debian.
+
+[apt_rpm]
+It manages packages with apt-rpm. Both low-level (rpm) and high-level (apt-get) package manager binaries required.
+
+[archive]
+Packs an archive.
+Source files can be deleted after archival by specifying remove=True.
+
+[at]
+Schedule the execution of a command or script file via the at command.
+It use this module to schedule a command or script file to run once in the future.
+All jobs are executed in the ‘a’ queue.
+
+[]
