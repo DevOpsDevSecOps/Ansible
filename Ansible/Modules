@@ -102,7 +102,25 @@ Includes a file with a list of plays or tasks to be executed in the current play
 Files with a list of plays can only be included at the top level. Lists of tasks can only be included where tasks normally run (in play).
 
 [include_role]
+Dynamically loads and executes a specified role as a task.
 
+[include_tasks]
+Includes a file with a list of tasks to be executed in the current playbook.
+
+[include_vars]
+It loads YAML/JSON variables dynamically from a file or directory, recursively, during task runtime.
+If loading a directory, the files are sorted alphabetically before being loaded.
+
+[k8s]
+
+[k8s_info]
+It describe Kubernetes (K8s) objects.
+
+[k8s_scale]
+Use to set the number of replicas for a Deployment, ReplicaSet, or Replication Controller, or the parallelism a Job.
+
+[k8s_service]
+It manage Services on Kubernetes.
 
 [service]
 It controls services on remote hosts.
