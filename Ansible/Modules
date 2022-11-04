@@ -28,4 +28,22 @@ Schedule the execution of a command or script file via the at command.
 It use this module to schedule a command or script file to run once in the future.
 All jobs are executed in the ‘a’ queue.
 
-[]
+[authorized_key]
+It adds or removes SSH authorized keys for particular user accounts.
+
+[aws_region_info]
+It gather information about AWS regions.
+
+[aws_s3]
+This module allows the user to manage S3 buckets and the objects within them.
+Includes support for creating and deleting both objects and buckets, retrieving objects as files or strings and generating download links.
+This module has a dependency on boto3 and botocore.
+
+[aws_s3_bucket_info]
+It lists S3 Buckets in AWS.
+
+[aws_s3_cors]
+It manage CORS for S3 buckets in AWS.
+
+[command]
+It execute commands on targets.
