@@ -88,7 +88,31 @@ It manage git checkouts of repositories to deploy files or software.
 [group]
 It manage presence of groups on a host Linux.
 
-[]
+[service]
+It controls services on remote hosts.
+
+[shell]
+It execute shell commands on targets remote node.
+
+[sts_assume_role]
+It assume a role using AWS Security Token Service and obtain temporary credentials.
+
+[systemd]
+It controls systemd services on remote hosts.
+
+[telnet]
+It is mostly to be used for enabling ssh on devices that only have telnet enabled by default.
+
+[ufw]
+It manage firewall with UFW.
+
+[unarchive]
+It unpacks an archive.
+It will not unpack a compressed file that does not contain an archive.
+By default, it will copy the source file from the local system to the target before unpacking.
+
+[user]
+It manage user accounts.
 
 [yum]
 It installs, upgrade, downgrades, removes, and lists packages and groups with the yum package manager.
