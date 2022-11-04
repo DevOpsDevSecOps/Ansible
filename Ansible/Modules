@@ -38,6 +38,16 @@ It gather information about AWS regions.
 This module allows the user to manage S3 buckets and the objects within them.
 Includes support for creating and deleting both objects and buckets, retrieving objects as files or strings and generating download links.
 This module has a dependency on boto3 and botocore.
+There are various modes of operation available with aws_s3.
+● PUT : upload
+● GET : download
+● geturl : return download URL
+● getstr : download object as string
+● list : list keys / objects
+● create : create bucket
+● delete : delete bucket
+● delobj : delete object
+● copy : copy object that is already stored in another bucket
 
 [aws_s3_bucket_info]
 It lists S3 Buckets in AWS.
@@ -62,6 +72,13 @@ It allows to create, update, or delete cron variable definitions.
 
 [dnf]
 It installs, upgrade, removes, and lists packages and groups with the dnf package manager.
+
+[docker_image_info]
+Inspect docker images with one or more image names.
+If an image does not exist locally, it will not appear in the results.
+
+[docker_login]
+Authenticate with a docker registry and add the credentials to your local Docker config file.
 
 [easy_install]
 It installs Python libraries, optionally in a virtualenv.
@@ -121,6 +138,36 @@ Use to set the number of replicas for a Deployment, ReplicaSet, or Replication C
 
 [k8s_service]
 It manage Services on Kubernetes.
+
+[mail]
+It is useful for sending emails from playbooks.
+By sending out a mail can be equally useful as a way to notify one or more people in a team that a specific action has been (successfully) taken.
+
+[mount]
+It control active and configured mount points for Linux.
+
+[npm]
+It manage node.js packages with Node Package Manager (npm).
+
+[ping]
+It try to connect to host, verify a usable python and return "pong" on success.
+
+[pip]
+It manage Python library dependencies.
+
+[reboot]
+Reboot a machine, wait for it to go down, come back up, and respond to commands.
+
+[s3_bucket]
+It manage S3 buckets in AWS, DigitalOcean, Ceph, Walrus and FakeS3.
+
+[s3_logging]
+It manage logging facility of an s3 bucket in AWS.
+
+[s3_sync]
+
+[s3_website]
+Configure an s3 bucket as a website.
 
 [service]
 It controls services on remote hosts.
