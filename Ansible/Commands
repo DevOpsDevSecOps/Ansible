@@ -11,6 +11,7 @@ ansible-inventory -i /FOLDER_NAME/FILE_NAME --list
 ansible all -m setup
 ansible all -m user -a "name=foo password=<crypted password here>"                             # creation and manipulation of existing user accounts
 ansible all -m user -a "name=foo state=absent"                                                 # removal of user accounts that may exist 
+ansible GROUPNAME_HOSTS -m ping
 ansible GROUPNAME_HOSTS -m shell -a 'echo $TERM'
 ansible GROUPNAME_HOSTS -m file -a "dest=/FOLDER_NAME/FOLDER_NAME/FILE_NAME mode=600"          # changing ownership and permissions on files
 ansible GROUPNAME_HOSTS -m file -a "dest=/FOLDER_NAME/FOLDER_NAME/FILE_NAME mode=600 owner=mdehaan group=mdehaan"
